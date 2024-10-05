@@ -1,6 +1,8 @@
-- name: Home
-  link: /
-- name: Portfolio
-  link: /portfolio.html
-- name: About
-  link: /about.html
+- name: Projects
+  link: "#projects"
+- name: Certifications
+  link: "#certifications"
+- name: Education
+  link: "#education"
+- name: Professional Background
+  link: "#professional-background"

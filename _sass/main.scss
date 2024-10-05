@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 4rem;
+}
+
 html,
 body {
     font-size: 14pt;
@@ -15,10 +20,16 @@ body {
     background-color: rgb(243, 231, 208);
 }
 
+p {
+    //font-size: 25px;
+    font-size: 20px;
+}
+
 nav {
     display: flex;
     flex-direction: row;
-    max-width: 800px;
+    //max-width: 800px;
+    max-width: 1100px;
     width: 100%;
     padding: 24px 0 18px 0;
     background-color: rgb(243, 231, 208);
@@ -28,6 +39,16 @@ nav {
 
 nav>a {
     display: block;
+    font-size: 18pt;
+    padding: 3px 9px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.to-top {
     font-size: 18pt;
     padding: 3px 9px;
     border: 2px solid black;
@@ -58,7 +79,7 @@ h1 {
 }
 
 h2 {
-    margin: 2ex 0 1ex 0;
+    margin: 2ex 0 2.5ex 0;
     padding: 0;
 }
 
@@ -68,7 +89,8 @@ h3 {
 }
 
 p {
-    margin: 0ex 0 6ex 0;
+    //margin: 0ex 0 6ex 0;
+    margin: 3ex 0 3ex 0;
     padding: 0;
     line-height: 1.3;
 }
@@ -76,7 +98,12 @@ p {
 .outer-shell {
     max-width: 800px;
     width: 100%;
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.pro-title {
+    font-family: "JetBrains Mono", monospace;
 }
 
 .contact-info-block {
@@ -89,11 +116,21 @@ p {
     margin-right: 24px;
 }
 
+.contact-entry-button {
+    display: flex;
+    flex-direction: row;
+}
+
 .contact-entry-button>a {
     color: hsl(0, 80%, 45%);
     text-decoration: none;
     border-bottom: 2pt solid hsl(0, 80%, 18%);
     border-radius: 2px;
+}
+
+.contact-entry-button>img {
+    width: 1.05em;
+    height: 1.05em;
 }
 
 .skill-set-entry {
@@ -104,7 +141,6 @@ p {
 
 .skill-category {
     flex: 0 0 12ch;
-
 }
 
 .skill-list {
@@ -112,4 +148,235 @@ p {
     border-radius: 2px;
     padding-left: 0.5ch;
     line-height: 1.4;
+}
+
+.anchor-link::before {
+    content: "#";
+    display: inline-block;
+    font-size: 18pt;
+    line-height: 1;
+    margin-left: -.8em;
+    text-decoration: none;
+    visibility: hidden;
+    width: .8em;
+    box-sizing: border-box;
+}
+
+.anchor-link:hover::before {
+    visibility: visible;
+}
+
+.anchor-link:hover {
+    color: hsl(0, 80%, 45%);
+    //text-decoration: underline hsl(0, 80%, 18%) 2pt;
+    text-decoration: none;
+    border-bottom: 2pt solid hsl(0, 80%, 18%);
+    border-radius: 2px;
+}
+
+h2>a:link {
+    text-decoration: none;
+    color: black;
+}
+
+h2>a:visited {
+    color: black;
+}
+
+.project-section-title {
+    text-decoration: underline;
+}
+
+.project-entry,
+.cert-entry,
+.education-entry,
+.experience-entry,
+.community-service-entry,
+.awards-entry {
+    margin-bottom: 12ex;
+}
+
+.entry-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.entry-title {
+    font-weight: bold;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.sub-title {
+    margin-left: 4ch;
+}
+
+.sub-title::before {
+    content: "@";
+    font-family: "JetBrains Mono", monospace;
+}
+
+.entry-desc {
+    margin-left: 1ch;
+    margin-bottom: 2ex;
+    padding-left: .75ch;
+    border-left: 2px solid black;
+    border-radius: 2px;
+}
+
+.projects-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.projects-button {
+    display: block;
+    padding: 3px 9px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.projects-button>a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.projects-button>a:visited {
+    color: black;
+}
+
+.projects-button:hover {
+    background-color: hsl(0, 80%, 18%);
+}
+
+.projects-button>img {
+    width: 1.05em;
+    height: 1.05em;
+}
+
+.cert-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.cert-button {
+    display: block;
+    padding: 3px 9px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.cert-button>a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.cert-button>a:visited {
+    color: black;
+}
+
+.cert-button:hover {
+    background-color: hsl(0, 80%, 18%);
+}
+
+.cert-button>img {
+    width: 1.05em;
+    height: 1.05em;
+}
+
+.cert-button>img.google-icon {
+    width: 0.85em;
+    height: 0.85em;
+}
+
+.cert-id {
+    display: block;
+    padding: 3px 9px;
+    margin-top: 7px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.cert-id::before {
+    content: "id#";
+    font-family: "JetBrains Mono", monospace;
+    margin-right: 4px;
+}
+
+.highlight-list {
+    margin-top: 3ex;
+    margin-left: 1.5ch;
+    border-left: 0px;
+    list-style: "-  ";
+    list-style-position: inside;
+    line-height: 1.4;
+}
+
+.highlight-list:before {
+    content: "Highlights";
+    font-family: "JetBrains Mono", monospace;
+    margin-left: -.8em;
+}
+
+.education-highlight {
+    margin-top: -3ex;
+    margin-left: 2.7ch;
+    border-left: 0px;
+    list-style: "-  ";
+    line-height: 1.4;
+}
+
+.start::after {
+    content: " to";
+    margin: 0 0.7ch;
+    font-size: 12pt;
+}
+
+.education-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.education-button {
+    display: block;
+    padding: 3px 9px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.education-button>a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.education-button>a:visited {
+    color: black;
+}
+
+.education-button:hover {
+    background-color: hsl(0, 80%, 18%);
+}
+
+.education-button>img {
+    width: 1.05em;
+    height: 1.05em;
 }

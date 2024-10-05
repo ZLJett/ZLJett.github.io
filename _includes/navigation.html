@@ -1,4 +1,5 @@
 <nav>
+    <a href="#" class="to-top">Back to Top</a>
     {% for item in site.data.navigationData %}
     <a href="{{ item.link }}" {% if page.url==item.link %}class="currentPage" {% endif %}>{{ item.name }}</a>
     {% endfor %}
