@@ -48,14 +48,46 @@ nav>a {
     color: black;
 }
 
+nav>a:hover {
+    background-color: hsl(0, 80%, 18%);
+    border: 2px solid rgb(243, 231, 208);
+    color: rgb(243, 231, 208);
+}
+
 .to-top {
     font-size: 18pt;
     padding: 3px 9px;
-    border: 2px solid black;
+    border: 2px solid hsl(0, 80%, 18%);
     border-radius: 4px;
     margin-right: 8px;
     text-decoration: none;
-    color: black;
+    color: hsl(0, 80%, 18%);
+    // Fade in animation
+    animation: appear 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -7s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        cursor: default;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .main-content {
@@ -64,6 +96,7 @@ nav>a {
     align-items: center;
     width: 100vw;
     padding-top: 80px;
+    margin-bottom: 15em;
 }
 
 .currentPage {
@@ -109,6 +142,8 @@ p {
 .contact-info-block {
     display: flex;
     flex-direction: row;
+    margin-top: -1em;
+    margin-left: 2em;
 }
 
 .contact-info-entry {
@@ -119,6 +154,14 @@ p {
 .contact-entry-button {
     display: flex;
     flex-direction: row;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-right: 8px;
+    transition: border-bottom 0.15s, color 0.15s;
+}
+
+.contact-entry-button:hover .contact-anchor {
+    border-bottom: none;
 }
 
 .contact-entry-button>a {
@@ -131,6 +174,15 @@ p {
 .contact-entry-button>img {
     width: 1.05em;
     height: 1.05em;
+}
+
+.contact-entry-button:hover {
+    border-bottom: 2pt solid hsl(0, 80%, 18%);
+    border-radius: 2px;
+}
+
+.contact-entry-button:hover .contact-button-text {
+    color: black;
 }
 
 .skill-set-entry {
@@ -148,6 +200,10 @@ p {
     border-radius: 2px;
     padding-left: 0.5ch;
     line-height: 1.4;
+}
+
+.anchor-link {
+    transition: border-bottom 0.15s, color 0.15s;
 }
 
 .anchor-link::before {
@@ -240,6 +296,18 @@ h2>a:visited {
     color: black;
     display: flex;
     flex-direction: row;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.projects-button>img {
+    width: 1.05em;
+    height: 1.05em;
+}
+
+.hidden-icon {
+    display: none;
+    width: 1.05em;
+    height: 1.05em;
 }
 
 .projects-button>a:link {
@@ -253,11 +321,19 @@ h2>a:visited {
 
 .projects-button:hover {
     background-color: hsl(0, 80%, 18%);
+    border: 2px solid rgb(243, 231, 208);
 }
 
-.projects-button>img {
-    width: 1.05em;
-    height: 1.05em;
+.projects-button:hover .project-button-text {
+    color: rgb(243, 231, 208);
+}
+
+.projects-button:hover .main-icon {
+    display: none;
+}
+
+.projects-button:hover .hidden-icon {
+    display: block;
 }
 
 .cert-info {
@@ -276,6 +352,7 @@ h2>a:visited {
     color: black;
     display: flex;
     flex-direction: row;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .cert-button>a:link {
@@ -289,6 +366,19 @@ h2>a:visited {
 
 .cert-button:hover {
     background-color: hsl(0, 80%, 18%);
+    border: 2px solid rgb(243, 231, 208);
+}
+
+.cert-button:hover .cert-button-text {
+    color: rgb(243, 231, 208);
+}
+
+.cert-button:hover .main-icon {
+    display: none;
+}
+
+.cert-button:hover .hidden-icon {
+    display: block;
 }
 
 .cert-button>img {
@@ -299,6 +389,7 @@ h2>a:visited {
 .cert-button>img.google-icon {
     width: 0.85em;
     height: 0.85em;
+    margin-top: 0.7ex;
 }
 
 .cert-id {
@@ -332,11 +423,15 @@ h2>a:visited {
 }
 
 .education-highlight {
-    margin-top: -3ex;
+    margin-top: -0.1ex;
     margin-left: 2.7ch;
     border-left: 0px;
-    list-style: "-  ";
+    list-style: "|  ";
     line-height: 1.4;
+}
+
+.education-highlight>li {
+    margin-top: 4px;
 }
 
 .start::after {
@@ -361,6 +456,7 @@ h2>a:visited {
     color: black;
     display: flex;
     flex-direction: row;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .education-button>a:link {
@@ -372,11 +468,121 @@ h2>a:visited {
     color: black;
 }
 
-.education-button:hover {
-    background-color: hsl(0, 80%, 18%);
-}
-
 .education-button>img {
     width: 1.05em;
     height: 1.05em;
+}
+
+.education-button:hover {
+    background-color: hsl(0, 80%, 18%);
+    border: 2px solid rgb(243, 231, 208);
+}
+
+.education-button:hover .education-button-text {
+    color: rgb(243, 231, 208);
+}
+
+.education-button:hover .main-icon {
+    display: none;
+}
+
+.education-button:hover .hidden-icon {
+    display: block;
+}
+
+@media screen and (max-width: 320px) {
+
+    html,
+    body {
+        font-size: 9pt;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    h1 {
+        max-width: 306px;
+        width: 100%;
+        margin: 0 0 3ex 0;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content: center;
+        row-gap: 2px;
+        top: -1em;
+        margin-left: 14px;
+        padding-top: 21px;
+        padding-bottom: 10px;
+    }
+
+    nav>a {
+        font-size: 10pt;
+        // padding: 3px 9px;
+        // margin-right: 8px;
+        // width: 78px;
+    }
+
+    .prof-background {
+        width: 153px;
+    }
+
+    .to-top {
+        font-size: 10pt;
+        padding: 6px 6px;
+        text-align: center;
+        margin-right: 0px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        background-color: hsl(0, 80%, 18%);
+        color: rgb(243, 231, 208);
+        // Fade in animation 
+        animation: appear 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -30s);
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .to-top:hover {
+        color: black;
+    }
+
+    .anchor-link::before {
+        // Adjust where section links stop in relation to section title
+        // i.e. stops clipping
+        line-height: 2.5;
+        margin-bottom: -2em;
+        // This is off the side of the screen but allows above items to work
+        content: "|";
+    }
+
+    .main-content {
+        margin-bottom: 3em;
+    }
+
+    .outer-shell {
+        max-width: 300px;
+        width: 100%;
+        margin-bottom: -8px;
+    }
+
+    .projects-button {
+        padding: 2px 6px;
+        // margin-top: 6px;
+    }
 }

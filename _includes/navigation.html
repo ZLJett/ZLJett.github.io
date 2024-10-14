@@ -1,6 +1,10 @@
 <nav>
-    <a href="#" class="to-top">Back to Top</a>
+    <a href="#top-of-page" class="to-top">Back to Top</a>
     {% for item in site.data.navigationData %}
-    <a href="{{ item.link }}" {% if page.url==item.link %}class="currentPage" {% endif %}>{{ item.name }}</a>
+    {% if item.name == "Professional Background" %}
+    <a href="{{ item.link }}" class="prof-background animate">{{ item.name }}</a>
+    {% else %}
+    <a href="{{ item.link }}">{{ item.name }}</a>
+    {% endif %}
     {% endfor %}
 </nav>
