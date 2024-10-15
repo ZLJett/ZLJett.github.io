@@ -157,31 +157,42 @@ p {
     border-radius: 4px;
     margin-top: 6px;
     margin-right: 8px;
+}
+
+.contact-main-icon {
+    width: 1.05em;
+    height: 1.05em;
+}
+
+.contact-anchor {
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-right: 8px;
     transition: border-bottom 0.15s, color 0.15s;
+    text-decoration: none;
 }
 
-.contact-entry-button:hover .contact-anchor {
-    border-bottom: none;
-}
-
-.contact-entry-button>a {
+.contact-button-text {
     color: hsl(0, 80%, 45%);
     text-decoration: none;
     border-bottom: 2pt solid hsl(0, 80%, 18%);
     border-radius: 2px;
 }
 
-.contact-entry-button>img {
-    width: 1.05em;
-    height: 1.05em;
+.contact-anchor:hover .contact-button-text {
+    border-bottom: none;
+    border-radius: 2px;
 }
 
-.contact-entry-button:hover {
+.contact-entry-button>a:hover {
     border-bottom: 2pt solid hsl(0, 80%, 18%);
     border-radius: 2px;
 }
 
-.contact-entry-button:hover .contact-button-text {
+
+.contact-entry-button>a:hover .contact-button-text {
     color: black;
 }
 
@@ -299,7 +310,7 @@ h2>a:visited {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.projects-button>img {
+.main-icon {
     width: 1.05em;
     height: 1.05em;
 }
@@ -379,11 +390,6 @@ h2>a:visited {
 
 .cert-button:hover .hidden-icon {
     display: block;
-}
-
-.cert-button>img {
-    width: 1.05em;
-    height: 1.05em;
 }
 
 .cert-button>img.google-icon {
@@ -581,8 +587,64 @@ h2>a:visited {
         margin-bottom: -8px;
     }
 
+    .contact-info-entry {
+        flex: 0 0 auto;
+        margin-right: 24px;
+    }
+
+    .contact-entry-button {
+        margin-right: 0px;
+    }
+
+    .contact-anchor {
+        margin-right: 0px;
+    }
+
+    .contact-button-text {
+        font-size: 11pt;
+    }
+
     .projects-button {
         padding: 2px 6px;
         // margin-top: 6px;
+    }
+
+    .project-button-text,
+    .cert-button-text,
+    .education-button-text {
+        font-size: 10.5pt;
+    }
+
+    .contact-main-icon {
+        width: 1.25em;
+        height: 1.25em;
+    }
+
+    .main-icon {
+        width: 1.15em;
+        height: 1.15em;
+    }
+
+    .hidden-icon {
+        width: 1.15em;
+        height: 1.15em;
+    }
+
+    .cert-button>img.google-icon {
+        width: 0.95em;
+        height: 0.95em;
+        margin-top: 0.7ex;
+    }
+
+    .freeCodeCamp-icon {
+        width: 1.35em;
+        height: 1.35em;
+        margin-top: -0.4ex;
+    }
+
+    .cert-button>img.freeCodeCamp-icon {
+        width: 1.35em;
+        height: 1.35em;
+        margin-top: -0.4ex;
     }
 }
