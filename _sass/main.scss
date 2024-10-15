@@ -191,8 +191,11 @@ p {
     border-radius: 2px;
 }
 
-
 .contact-entry-button>a:hover .contact-button-text {
+    color: black;
+}
+
+.contact-anchor:visited .contact-button-text {
     color: black;
 }
 
@@ -326,8 +329,9 @@ h2>a:visited {
     color: black;
 }
 
-.projects-button>a:visited {
-    color: black;
+.projects-button:visited {
+    color: hsl(0, 80%, 45%);
+    border: 2pt solid hsl(0, 80%, 45%);
 }
 
 .projects-button:hover {
@@ -371,8 +375,9 @@ h2>a:visited {
     color: black;
 }
 
-.cert-button>a:visited {
-    color: black;
+.cert-button:visited {
+    color: hsl(0, 80%, 45%);
+    border: 2pt solid hsl(0, 80%, 45%);
 }
 
 .cert-button:hover {
@@ -470,8 +475,9 @@ h2>a:visited {
     color: black;
 }
 
-.education-button>a:visited {
-    color: black;
+.education-button:visited {
+    color: hsl(0, 80%, 45%);
+    border: 2pt solid hsl(0, 80%, 45%);
 }
 
 .education-button>img {
@@ -495,6 +501,360 @@ h2>a:visited {
 .education-button:hover .hidden-icon {
     display: block;
 }
+
+
+
+@media screen and (max-width: 1100px) {
+
+    nav {
+        max-width: 800px;
+    }
+
+    .to-top {
+        font-size: 16pt;
+        padding: 6px 6px;
+        text-align: center;
+        margin-right: 0px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        background-color: hsl(0, 80%, 18%);
+        color: rgb(243, 231, 208);
+        // Fade in animation 
+        animation: appear 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -30s);
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    html,
+    body {
+        font-size: 11pt;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    h1 {
+        max-width: 686px;
+        width: 100%;
+        margin: 0 0 3ex 0;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content: space-evenly;
+        max-width: 686px;
+        margin-right: -5pt;
+        row-gap: 2px;
+        top: -1em;
+        margin-left: 14px;
+        padding-top: 21px;
+        padding-bottom: 10px;
+    }
+
+    nav>a {
+        font-size: 13pt;
+        // padding: 3px 9px;
+        // margin-right: 8px;
+        // width: 78px;
+    }
+
+    .prof-background {
+        width: 189px;
+    }
+
+    .to-top {
+        font-size: 13pt;
+        padding: 6px 6px;
+        text-align: center;
+        margin-right: 0px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        background-color: hsl(0, 80%, 18%);
+        color: rgb(243, 231, 208);
+        // Fade in animation 
+        animation: appear 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -30s);
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .to-top:hover {
+        color: black;
+    }
+
+    .anchor-link::before {
+        // Adjust where section links stop in relation to section title
+        // i.e. stops clipping
+        line-height: 2.0;
+        margin-bottom: -2em;
+        // This is off the side of the screen but allows above items to work
+        content: "|";
+    }
+
+    .main-content {
+        margin-bottom: 3em;
+    }
+
+    .outer-shell {
+        max-width: 680px;
+        width: 100%;
+        margin-bottom: 6px;
+    }
+
+    .contact-info-entry {
+        flex: 0 0 auto;
+        margin-right: 24px;
+    }
+
+    .contact-entry-button {
+        margin-right: 0px;
+    }
+
+    .contact-anchor {
+        margin-right: 0px;
+    }
+
+    .contact-button-text {
+        font-size: 12pt;
+    }
+
+    .projects-button {
+        padding: 2px 6px;
+        // margin-top: 6px;
+    }
+
+    .project-button-text,
+    .cert-button-text,
+    .education-button-text {
+        font-size: 12pt;
+    }
+
+    .contact-main-icon {
+        width: 1.25em;
+        height: 1.25em;
+    }
+
+    .main-icon {
+        width: 1.15em;
+        height: 1.15em;
+    }
+
+    .hidden-icon {
+        width: 1.15em;
+        height: 1.15em;
+    }
+
+    .cert-button>img.google-icon {
+        width: 1.05em;
+        height: 1.05em;
+        margin-top: 0.7ex;
+    }
+
+    .freeCodeCamp-icon {
+        width: 1.45em;
+        height: 1.45em;
+        margin-top: -0.4ex;
+    }
+
+    .cert-button>img.freeCodeCamp-icon {
+        width: 1.45em;
+        height: 1.45em;
+        margin-top: -0.4ex;
+    }
+}
+
+
+
+@media screen and (max-width: 580px) {
+
+    html,
+    body {
+        font-size: 10pt;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    h1 {
+        max-width: 506px;
+        width: 100%;
+        margin: 0 0 3ex 0;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content: space-evenly;
+        max-width: 526px;
+        margin-right: -5pt;
+        row-gap: 2px;
+        top: -1em;
+        margin-left: 14px;
+        padding-top: 21px;
+        padding-bottom: 10px;
+    }
+
+    nav>a {
+        font-size: 13pt;
+        // padding: 3px 9px;
+        // margin-right: 8px;
+        // width: 78px;
+    }
+
+    .prof-background {
+        width: 189px;
+    }
+
+    .to-top {
+        font-size: 13pt;
+        padding: 6px 6px;
+        text-align: center;
+        margin-right: 0px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        background-color: hsl(0, 80%, 18%);
+        color: rgb(243, 231, 208);
+        // Fade in animation 
+        animation: appear 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -30s);
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .to-top:hover {
+        color: black;
+    }
+
+    .anchor-link::before {
+        // Adjust where section links stop in relation to section title
+        // i.e. stops clipping
+        line-height: 2.9;
+        margin-bottom: -2em;
+        // This is off the side of the screen but allows above items to work
+        content: "|";
+    }
+
+    .main-content {
+        margin-bottom: 3em;
+    }
+
+    .outer-shell {
+        max-width: 500px;
+        width: 100%;
+        margin-bottom: -8px;
+    }
+
+    .contact-info-entry {
+        flex: 0 0 auto;
+        margin-right: 24px;
+    }
+
+    .contact-entry-button {
+        margin-right: 0px;
+    }
+
+    .contact-anchor {
+        margin-right: 0px;
+    }
+
+    .contact-button-text {
+        font-size: 12pt;
+    }
+
+    .projects-button {
+        padding: 2px 6px;
+        // margin-top: 6px;
+    }
+
+    .project-button-text,
+    .cert-button-text,
+    .education-button-text {
+        font-size: 12pt;
+    }
+
+    .contact-main-icon {
+        width: 1.25em;
+        height: 1.25em;
+    }
+
+    .main-icon {
+        width: 1.15em;
+        height: 1.15em;
+    }
+
+    .hidden-icon {
+        width: 1.15em;
+        height: 1.15em;
+    }
+
+    .cert-button>img.google-icon {
+        width: 1.05em;
+        height: 1.05em;
+        margin-top: 0.7ex;
+    }
+
+    .freeCodeCamp-icon {
+        width: 1.45em;
+        height: 1.45em;
+        margin-top: -0.4ex;
+    }
+
+    .cert-button>img.freeCodeCamp-icon {
+        width: 1.45em;
+        height: 1.45em;
+        margin-top: -0.4ex;
+    }
+}
+
+
 
 @media screen and (max-width: 320px) {
 
@@ -637,12 +997,6 @@ h2>a:visited {
     }
 
     .freeCodeCamp-icon {
-        width: 1.35em;
-        height: 1.35em;
-        margin-top: -0.4ex;
-    }
-
-    .cert-button>img.freeCodeCamp-icon {
         width: 1.35em;
         height: 1.35em;
         margin-top: -0.4ex;
