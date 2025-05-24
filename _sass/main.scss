@@ -266,6 +266,11 @@ h2>a:visited {
     margin-bottom: 12ex;
 }
 
+// Shorten space between entry with button so not as ugly a gap
+.short-experience-entry {
+    margin-bottom: 8ex;
+}
+
 .entry-info {
     display: flex;
     flex-direction: row;
@@ -322,6 +327,57 @@ h2>a:visited {
     display: none;
     width: 1.05em;
     height: 1.05em;
+}
+
+.experience-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.experience-button {
+    display: block;
+    padding: 3px 9px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.experience-button>a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.experience-button:visited {
+    color: hsl(0, 80%, 45%);
+    border: 2pt solid hsl(0, 80%, 45%);
+}
+
+.experience-button>img {
+    width: 1.05em;
+    height: 1.05em;
+}
+
+.experience-button:hover {
+    background-color: hsl(0, 80%, 18%);
+    border: 2px solid rgb(243, 231, 208);
+}
+
+.experience-button:hover .experience-button-text {
+    color: rgb(243, 231, 208);
+}
+
+.experience-button:hover .main-icon {
+    display: none;
+}
+
+.experience-button:hover .hidden-icon {
+    display: block;
 }
 
 .projects-button>a:link {
