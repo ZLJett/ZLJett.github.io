@@ -207,6 +207,7 @@ p {
 
 .skill-category {
     flex: 0 0 12ch;
+    font-weight: 600;
 }
 
 .skill-list {
@@ -484,7 +485,7 @@ h2>a:visited {
 }
 
 .highlight-list:before {
-    content: "Highlights";
+    content: "Course Highlights";
     font-family: "JetBrains Mono", monospace;
     margin-left: -.8em;
 }
@@ -493,7 +494,8 @@ h2>a:visited {
     margin-top: -0.1ex;
     margin-left: 2.7ch;
     border-left: 0px;
-    list-style: "|  ";
+    //list-style: "|  ";
+    list-style: "-  ";
     line-height: 1.4;
 }
 
