@@ -1,0 +1,11 @@
+<nav>
+    <a href="#top-of-page" class="to-top">Back to Top</a>
+    <!-- Navigation Data Source -->
+    {% for item in site.data.sdResumeNavigationData %}
+    {% if item.name == "Professional Background" %}
+    <a href="{{ item.link }}" class="prof-background animate">{{ item.name }}</a>
+    {% else %}
+    <a href="{{ item.link }}">{{ item.name }}</a>
+    {% endif %}
+    {% endfor %}
+</nav>

@@ -208,6 +208,8 @@ p {
 .skill-category {
     flex: 0 0 12ch;
     font-weight: 600;
+    // Allows longer skill category name "Communications" to have some right buffer
+    margin-right: 6pt;
 }
 
 .skill-list {
@@ -298,6 +300,10 @@ h2>a:visited {
     padding-left: .75ch;
     border-left: 2px solid black;
     border-radius: 2px;
+}
+
+.entry-desc-list {
+    margin: 1px 0 0 1px;
 }
 
 .projects-buttons {
